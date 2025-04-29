@@ -1,0 +1,2 @@
+W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\wwwroot\css\site.css
+W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\wwwroot\js\site.js

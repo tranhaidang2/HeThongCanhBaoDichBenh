@@ -1,0 +1,112 @@
+﻿@model HeThongCanhBaoDichBenh.ViewModels.RegisterVM
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/account.css">
+    <title>Đăng nhập - Đăng ký</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="box-login" id="login">
+                <div class="top-header">
+                    <h3>Chào mừng trở lại!</h3>
+                    <small>We are happy to have you back.</small>
+                </div>
+                <form asp-action="Login" method="post">
+                    <div class="input-group">
+                        <div class="input-field">
+                            <input type="text" class="input-box" asp-for="Username" required>
+                            <label asp-for="Username">Tên đăng nhập</label>
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" class="input-box" asp-for="Password" required>
+                            <label asp-for="Password">Mật khẩu</label>
+                            <div class="eye-area">
+                                <div class="eye-box" onclick="togglePassword('Password')">
+                                    <i class="fa-regular fa-eye" id="eye-password"></i>
+                                    <i class="fa-regular fa-eye-slash" id="eye-slash-password"></i>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="remember">
+                            <input type="checkbox" id="rememberMe" class="check">
+                            <label for="rememberMe">Ghi nhớ tài khoản</label>
+                        </div>
+                        <div class="input-field">
+                            <button type="submit" class="input-submit">Đăng nhập</button>
+                        </div>
+                        <div class="forgot">
+                            <a href="#">Quên mật khẩu?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="box-register" id="register">
+                <div class="top-header">
+                    <h3>Đăng ký tài khoản</h3>
+                    <small>We are happy to have you with us.</small>
+                </div>
+                <form asp-action="Register" method="post">
+                    <div class="input-group">
+                        <div class="input-field">
+                            <input type="text" class="input-box" asp-for="Username" required>
+                            <label asp-for="Username">Tên đăng nhập</label>
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" class="input-box" asp-for="Password" required>
+                            <label asp-for="Password">Mật khẩu</label>
+                            <div class="eye-area">
+                                <div class="eye-box" onclick="myRegPassword()">
+                                    <i class="fa-regular fa-eye" id="eye-password"></i>
+                                    <i class="fa-regular fa-eye-slash" id="eye-slash-password"></i>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" class="input-box" asp-for="ConfirmPassword" required>
+                            <label asp-for="ConfirmPassword">Xác nhận mật khẩu</label>
+                            <div class="eye-area">
+                                <div class="eye-box" onclick="myRegPassword()">
+                                    <i class="fa-regular fa-eye" id="eye-confirm"></i>
+                                    <i class="fa-regular fa-eye-slash" id="eye-slash-confirm"></i>
+                                </div>
+                            </div>
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+                        <div class="remember">
+                            <input type="checkbox" id="acceptTerms" class="check" required>
+                            <label for="acceptTerms">Chấp nhận các điều khoản của chúng tôi</label>
+                        </div>
+                        <div class="input-field">
+                            <button type="submit" class="input-submit">Đăng ký</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="switch">
+                <a href="#" class="login active" onclick="login()">Đăng nhập</a>
+                <a href="#" class="register" onclick="register()">Đăng ký</a>
+                <div class="btn-active" id="btn"></div>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/account.js"></script>
+</body>
+</html>
