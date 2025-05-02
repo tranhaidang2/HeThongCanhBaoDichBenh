@@ -5,14 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|w:\\tl_main\\hethongcanhbaodichbenh\\hethongcanhbaodichbenh\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|solutionrelative:hethongcanhbaodichbenh\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|w:\\tl_main\\hethongcanhbaodichbenh\\hethongcanhbaodichbenh\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|solutionrelative:hethongcanhbaodichbenh\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|w:\\tl_main\\hethongcanhbaodichbenh\\hethongcanhbaodichbenh\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|solutionrelative:hethongcanhbaodichbenh\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,35 +32,9 @@
               "RelativeDocumentMoniker": "HeThongCanhBaoDichBenh\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "HeThongCanhBaoDichBenh\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGUAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T16:46:14.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml.css",
-              "DocumentMoniker": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeDocumentMoniker": "HeThongCanhBaoDichBenh\\Views\\Shared\\_Layout.cshtml.css",
-              "ToolTip": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeToolTip": "HeThongCanhBaoDichBenh\\Views\\Shared\\_Layout.cshtml.css",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-04-29T16:42:28.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "HeThongCanhBaoDichBenh\\Views\\Account\\Register.cshtml",
-              "ToolTip": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "HeThongCanhBaoDichBenh\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T16:41:40.99Z",
+              "WhenOpened": "2025-05-02T16:34:12.104Z",
               "EditorCaption": ""
             }
           ]
