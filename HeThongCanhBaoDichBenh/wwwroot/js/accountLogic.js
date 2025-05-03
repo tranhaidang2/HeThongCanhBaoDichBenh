@@ -18,10 +18,20 @@
         .then(response => response.json())
         .then(data => {
             alert(data.message);
-            if (data.message.includes('Đăng ký thành công')) {
+            if (data.success) {
                 document.getElementById('btn-login').click();
-                document.getElementById('login-username').value = username;
-                document.getElementById('login-password').focus();
+
+                setTimeout(() => {
+                    const loginUsername = document.getElementById('login-username');
+                    const loginPassword = document.getElementById('login-password');
+
+                    loginUsername.value = username;
+
+                    loginUsername.setCustomValidity("");
+                    loginUsername.checkValidity();
+
+                    loginPassword.focus();
+                }, 100);
             }
         })
         .catch(error => {

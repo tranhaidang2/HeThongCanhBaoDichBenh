@@ -1,6 +1,6 @@
 ﻿namespace HeThongCanhBaoDichBenh.ViewModels
 {
-    public class RegisterVM
+    public class AccountVM
     {
         public string? Username { get; set; }
 

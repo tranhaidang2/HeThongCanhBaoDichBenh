@@ -1,0 +1,143 @@
+﻿@model List<HeThongCanhBaoDichBenh.Models.News>
+@{
+    ViewData["Title"] = "Trang Tin Tức";
+}
+<link rel="stylesheet" href="~/css/news.css" asp-append-version="true" />
+<!-- Recent Posts Section -->
+<section id="recent-posts" class="recent-posts section">
+    <!-- Content Area -->
+    <div class="container">
+        <div class="row">
+            <!-- Right: Filter (col-2) -->
+            <div class="col-lg-3">
+                <div class="filter-box p-3 border rounded bg-light">
+                    <h5 class="mb-3">Lọc bài viết</h5>
+                    <input type="text" id="search-input" class="form-control mb-3" placeholder="Tìm kiếm...">
+                    <div class="form-check">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="đốm trắng" id="filter1">
+                        <label class="form-check-label" for="filter1">
+                            Đốm trắng
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="phân trắng" id="filter2">
+                        <label class="form-check-label" for="filter2">
+                            Phân trắng
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="nấm" id="filter3">
+                        <label class="form-check-label" for="filter3">
+                            Bệnh nấm
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="gan tụy" id="filter4">
+                        <label class="form-check-label" for="filter4">
+                            Gan tụy
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="đen mang" id="filter5">
+                        <label class="form-check-label" for="filter5">
+                            Đen mang
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="đầu vàng" id="filter6">
+                        <label class="form-check-label" for="filter6">
+                            Đầu vàng
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- Left: Posts (col-10) -->
+            <div class="col-lg-9">
+                <div class="row gy-5" id="news-list">
+                    @foreach (var news in Model)
+                    {
+                        <div class="col-xl-4 col-md-6 news-item"
+                             data-title="@news.NewsTitle.ToLower()"
+                             data-content="@news.NewsContent.ToLower()"
+                             data-tags="@news.NewsTitle?.ToLower()">
+                            <div class="post-item position-relative h-100" data-aos="fade-up">
+                                <div class="post-img position-relative overflow-hidden">
+                                    <img src="@(string.IsNullOrEmpty(news.Images.FirstOrDefault()?.ImagePath) ? "/img/download.jpg" : news.Images.FirstOrDefault().ImagePath)" class="image" alt="News Image">
+                                    <span class="post-date">@news.NewsCreateAt.ToString("dd/MM/yyyy")</span>
+                                </div>
+                                <div class="post-content d-flex flex-column">
+                                    <h3 class="post-title">@news.NewsTitle</h3>
+                                    <div class="meta d-flex align-items-center mt-2">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-person"></i>
+                                            <span class="ps-2">@(@news.User?.Username ?? "Quản trị viên")</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <a href="/News/Detail/@news.NewsId" class="readmore stretched-link">
+                                        <span>Đọc thêm</span>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="no-results" class="text-center d-none" style="height: 70vh; display: flex; justify-content: center; align-items: center;">
+            <h4>Không có kết quả phù hợp</h4>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            function normalizeText(text) {
+                return text ? text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") : "";
+            }
+
+            $('#search-input').on('keyup', function () {
+                filterNews();
+            });
+
+            $('.filter-checkbox').on('change', function () {
+                filterNews();
+            });
+
+            function filterNews() {
+                const searchTerm = normalizeText($('#search-input').val());
+                const checkedFilters = $('.filter-checkbox:checked').map(function () {
+                    return normalizeText($(this).val());
+                }).get();
+
+                let hasVisibleItems = false;
+
+                $('.news-item').each(function () {
+                    const $item = $(this);
+                    const title = normalizeText($item.data('title'));
+                    const content = normalizeText($item.data('content'));
+                    const tags = normalizeText($item.data('tags'));
+
+                    const matchesSearch = title.includes(searchTerm) || content.includes(searchTerm);
+                    const matchesFilter = checkedFilters.length === 0 || checkedFilters.some(tag => tags.includes(tag));
+
+                    if (matchesSearch && matchesFilter) {
+                        $item.show();
+                        hasVisibleItems = true;
+                    } else {
+                        $item.hide();
+                    }
+                });
+
+                $('#no-results').toggleClass('d-none', hasVisibleItems);
+            }
+
+            filterNews();
+        });
+    </script>
+}

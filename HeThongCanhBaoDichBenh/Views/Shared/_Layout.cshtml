@@ -55,7 +55,7 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a asp-controller="Home" asp-action="Index" class="active">Trang chủ</a></li>
-                    <li><a asp-controller="" asp-action="">Tin tức</a></li>
+                    <li><a asp-controller="News" asp-action="Index">Tin tức</a></li>
                     <li><a asp-controller="" asp-action="">Dự báo</a></li>
                     <li><a asp-controller="" asp-action="">Thông tin dịch bệnh</a></li>
                     <li><a asp-controller="" asp-action="">Diễn đàn</a></li>
@@ -70,7 +70,7 @@
                     Đăng nhập
                 </a>
             } else {
-                <a asp-controller="Account" asp-action="Register"
+                <a asp-controller="Account" asp-action="Logout"
                    class="btn btn-profile-icon rounded-circle d-flex align-items-center justify-content-center"
                    style="width: 40px; height: 40px; background-color: #26c6da; color: white; margin-left: 20px;">
                     <i class="bi bi-person-fill"></i>

@@ -18,16 +18,24 @@ namespace HeThongCanhBaoDichBenh.Controllers
             return View();
         }
         [HttpPost]
-        public JsonResult Register([FromBody] RegisterVM model)
+        public JsonResult Register([FromBody] AccountVM model)
         {
             if (string.IsNullOrWhiteSpace(model.Username) || string.IsNullOrWhiteSpace(model.Password))
             {
-                return Json(new { message = "Vui lòng nhập đầy đủ thông tin." });
+                return Json(new 
+                { 
+                    success = false,
+                    message = "Vui lòng nhập đầy đủ thông tin" 
+                });
             }
 
             if (_context.Users.Any(u => u.Username == model.Username))
             {
-                return Json(new { message = "Tên đăng nhập đã tồn tại." });
+                return Json(new 
+                {
+                    success = false,
+                    message = "Tên đăng nhập đã tồn tại" 
+                });
             }
 
             var user = new User
@@ -42,21 +50,33 @@ namespace HeThongCanhBaoDichBenh.Controllers
             _context.Users.Add(user);
             _context.SaveChanges();
 
-            return Json(new { message = "Đăng ký thành công" });
+            return Json(new 
+            {
+                success = true,
+                message = "Đăng ký thành công" 
+            });
         }
         [HttpPost]
-        public JsonResult Login([FromBody] RegisterVM model)
+        public JsonResult Login([FromBody] AccountVM model)
         {
             if (string.IsNullOrWhiteSpace(model.Username) || string.IsNullOrWhiteSpace(model.Password))
             {
-                return Json(new { success = false, message = "Vui lòng nhập đầy đủ thông tin." });
+                return Json(new 
+                { 
+                    success = false,
+                    message = "Vui lòng nhập đầy đủ thông tin" 
+                });
             }
 
             var user = _context.Users.FirstOrDefault(u => u.Username == model.Username);
 
             if (user == null || !PasswordHelper.VerifyPassword(model.Password, user.PasswordHash))
             {
-                return Json(new { success = false, message = "Tên đăng nhập hoặc mật khẩu không đúng." });
+                return Json(new 
+                { 
+                    success = false, 
+                    message = "Tên đăng nhập hoặc mật khẩu không đúng" 
+                });
             }
 
             HttpContext.Session.SetString("UserId", user.UserId);
@@ -70,5 +90,16 @@ namespace HeThongCanhBaoDichBenh.Controllers
             });
         }
 
+        public JsonResult Logout()
+        {
+            HttpContext.Session.Clear();
+
+            return Json(new
+            {
+                success = true,
+                message = "Đăng xuất thành công!",
+                redirectUrl = Url.Action("Index", "Home")
+            });
+        }
     }
 }

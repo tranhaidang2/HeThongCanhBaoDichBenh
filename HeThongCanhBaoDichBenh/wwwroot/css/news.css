@@ -1,0 +1,321 @@
+﻿/* CSS cho Trang Tin Tức */
+.recent-posts {
+    margin-top: 90px;
+    padding: 20px 0;
+}
+
+/* Phần tiêu đề */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+    .section-title h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 15px;
+    }
+
+    .section-title p {
+        color: #7f8c8d;
+        font-size: 1.1rem;
+    }
+
+/* Ô tìm kiếm */
+#search-input {
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+    #search-input:focus {
+        border-color: #3498db;
+        box-shadow: 0 2px 15px rgba(52, 152, 219, 0.2);
+        outline: none;
+    }
+
+/* Khung lọc */
+.filter-box {
+    position: sticky;
+    top: 100px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    padding: 20px !important;
+    margin-bottom: 30px;
+    height: fit-content;
+}
+
+    .filter-box h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2c3e50;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 15px;
+    }
+
+.form-check {
+    margin-bottom: 12px;
+}
+
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    margin-top: 0.2em;
+}
+
+    .form-check-input:checked {
+        background-color: #3498db;
+        border-color: #3498db;
+    }
+
+.form-check-label {
+    font-size: 0.95rem;
+    color: #34495e;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+/* Bài viết */
+.post-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+    .post-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+
+.post-img {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+    .post-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+.post-item:hover .post-img img {
+    transform: scale(1.05);
+}
+
+.post-date {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #3498db;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.post-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+    line-height: 1.4;
+}
+
+.post-item:hover .post-title {
+    color: #3498db;
+}
+
+.meta {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+    .meta i {
+        margin-right: 5px;
+        color: #3498db;
+    }
+
+hr {
+    margin: 15px 0;
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+.readmore {
+    display: inline-flex;
+    align-items: center;
+    color: #3498db;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-top: auto;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    .readmore i {
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+    }
+
+.post-item:hover .readmore i {
+    transform: translateX(3px);
+}
+
+/* Thông báo không có kết quả */
+#no-results {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px 0;
+}
+
+    #no-results h4 {
+        color: #7f8c8d;
+        font-weight: 500;
+    }
+
+/* Responsive */
+@media (max-width: 1199.98px) {
+    .post-img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .recent-posts {
+        margin-top: 80px;
+    }
+
+    .filter-box {
+        position: static;
+        margin-top: 0;
+    }
+
+    .post-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-title p {
+        font-size: 1rem;
+    }
+
+    #search-input {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+
+    .post-img {
+        height: 160px;
+    }
+
+    .post-content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .recent-posts {
+        margin-top: 70px;
+    }
+
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+
+    .filter-box {
+        padding: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 0.9rem;
+    }
+
+    .post-img {
+        height: 140px;
+    }
+
+    .post-title {
+        font-size: 1rem;
+    }
+
+    .meta {
+        font-size: 0.85rem;
+    }
+
+    .readmore {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-item {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+    .news-item:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .news-item:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .news-item:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .news-item:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+    .news-item:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+
+    .news-item:nth-child(6) {
+        animation-delay: 0.6s;
+    }

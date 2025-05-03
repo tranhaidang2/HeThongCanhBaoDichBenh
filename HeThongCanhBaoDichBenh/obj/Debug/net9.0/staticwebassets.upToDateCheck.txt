@@ -72,6 +72,7 @@ W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\wwwroot\lib\jquery\dist
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\wwwroot\lib\aos\aos.css
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\wwwroot\favicon.ico
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\wwwroot\lib\jquery-validation\dist\additional-methods.js
+W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\wwwroot\css\news.css
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -127,9 +128,11 @@ W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\wwwroot\lib\bootstrap\d
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\wwwroot\lib\jquery\dist\jquery.slim.js
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\css\account.css
+wwwroot\css\news.css
 wwwroot\css\section.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\img\download.jpg
 wwwroot\img\hero-services-img.webp
 wwwroot\js\account.js
 wwwroot\js\accountLogic.js

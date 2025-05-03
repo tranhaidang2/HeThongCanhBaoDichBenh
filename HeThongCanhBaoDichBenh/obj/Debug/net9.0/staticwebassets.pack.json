@@ -185,6 +185,10 @@
       "PackagePath": "staticwebassets\\css\\account.css"
     },
     {
+      "Id": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\wwwroot\\css\\news.css",
+      "PackagePath": "staticwebassets\\css\\news.css"
+    },
+    {
       "Id": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\wwwroot\\css\\section.css",
       "PackagePath": "staticwebassets\\css\\section.css"
     },
@@ -195,6 +199,10 @@
     {
       "Id": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\wwwroot\\img\\download.jpg",
+      "PackagePath": "staticwebassets\\img\\download.jpg"
     },
     {
       "Id": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\wwwroot\\img\\hero-services-img.webp",

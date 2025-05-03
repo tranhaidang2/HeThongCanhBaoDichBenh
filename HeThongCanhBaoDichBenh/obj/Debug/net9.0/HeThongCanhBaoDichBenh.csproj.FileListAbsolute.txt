@@ -222,8 +222,6 @@ W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\HeThon
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\bin\Debug\net9.0\BCrypt.Net-Next.dll
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\HeThongCanhBaoDichBenh.sourcelink.json
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\smef3f3hqd-ybh1x1xcdx.gz
-W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\pqxhvl2vi0-oa146ohszs.gz
-W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\balb3jphcm-n17dbprvmh.gz
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\pe0thzg6jv-jfm3rcjzyc.gz
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\dk388oavvq-akmhyfivmy.gz
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\7ea6uy0k2e-x8fnk1bhg7.gz
@@ -298,3 +296,6 @@ W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compre
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\xi87ztm2kl-dpno2ecxid.gz
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\r3fswliz6z-inpuwtglbx.gz
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\a7r2lopl0h-z0yu7jkq53.gz
+W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\pqxhvl2vi0-zljajt7497.gz
+W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\balb3jphcm-n17dbprvmh.gz
+W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\eqvoazlm60-jvbhjr6ska.gz
