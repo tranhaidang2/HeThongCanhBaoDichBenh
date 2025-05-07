@@ -1,6 +1,8 @@
 ﻿using HeThongCanhBaoDichBenh.Data;
+using HeThongCanhBaoDichBenh.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using X.PagedList;
 
 namespace HeThongCanhBaoDichBenh.Controllers
 {
@@ -12,14 +14,21 @@ namespace HeThongCanhBaoDichBenh.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index(int? page)
         {
-            var allNews = _context.News
+            int pageSize = 6;
+            int pageNumber = page == null || page < 1 ? 1 : page.Value;
+
+            var allNewsQuery = _context.News
                 .Include(n => n.User)
                 .Include(n => n.Images)
-                .OrderByDescending(n => n.NewsCreateAt)
-                .ToList();
-            return View(allNews);
+                .OrderByDescending(n => n.NewsCreateAt);
+
+            var allNews = await allNewsQuery.ToListAsync();
+            PagedList<News> lst = new PagedList<News>(allNews, pageNumber, pageSize);
+
+            return View(lst);
         }
+
     }
 }

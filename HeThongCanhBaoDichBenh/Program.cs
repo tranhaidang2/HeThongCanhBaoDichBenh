@@ -1,4 +1,5 @@
 ﻿using HeThongCanhBaoDichBenh.Data;
+using HeThongCanhBaoDichBenh.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,9 +12,11 @@ builder.Services.AddDbContext<HeThongCanhBaoBenhTomContext>(options =>
 builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
 
+builder.Services.AddHttpClient<WeatherService>();
+builder.Services.AddScoped<DiseaseForecastService>();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");

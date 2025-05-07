@@ -319,3 +319,43 @@ hr {
     .news-item:nth-child(6) {
         animation-delay: 0.6s;
     }
+
+/* Phân trang */
+.pagination {
+    margin: 20px 0;
+}
+
+.page-item {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.page-link {
+    color: #4a5568;
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+    .page-link:hover {
+        color: #2d3748;
+        background-color: #edf2f7;
+        border-color: #cbd5e0;
+    }
+
+.page-item.active .page-link {
+    color: #fff;
+    background-color: #4299e1;
+    border-color: #4299e1;
+}
+
+.page-item.disabled .page-link {
+    color: #a0aec0;
+    background-color: #fff;
+    border-color: #e2e8f0;
+    cursor: not-allowed;
+}

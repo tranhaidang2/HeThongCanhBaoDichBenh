@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|w:\\tl_main\\hethongcanhbaodichbenh\\hethongcanhbaodichbenh\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|solutionrelative:hethongcanhbaodichbenh\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|w:\\tl_main\\hethongcanhbaodichbenh\\hethongcanhbaodichbenh\\models\\disease.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|solutionrelative:hethongcanhbaodichbenh\\models\\disease.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|w:\\tl_main\\hethongcanhbaodichbenh\\hethongcanhbaodichbenh\\views\\news\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|solutionrelative:hethongcanhbaodichbenh\\views\\news\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|w:\\tl_main\\hethongcanhbaodichbenh\\hethongcanhbaodichbenh\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|solutionrelative:hethongcanhbaodichbenh\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|w:\\tl_main\\hethongcanhbaodichbenh\\hethongcanhbaodichbenh\\views\\disease\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|solutionrelative:hethongcanhbaodichbenh\\views\\disease\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|w:\\tl_main\\hethongcanhbaodichbenh\\hethongcanhbaodichbenh\\wwwroot\\css\\news.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|solutionrelative:hethongcanhbaodichbenh\\wwwroot\\css\\news.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|w:\\tl_main\\hethongcanhbaodichbenh\\hethongcanhbaodichbenh\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|solutionrelative:hethongcanhbaodichbenh\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|w:\\tl_main\\hethongcanhbaodichbenh\\hethongcanhbaodichbenh\\controllers\\diseasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E1DC37-05EA-484C-9444-B484019F9F6F}|HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh.csproj|solutionrelative:hethongcanhbaodichbenh\\controllers\\diseasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,54 +42,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NewsController.cs",
-              "DocumentMoniker": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Controllers\\NewsController.cs",
-              "RelativeDocumentMoniker": "HeThongCanhBaoDichBenh\\Controllers\\NewsController.cs",
-              "ToolTip": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Controllers\\NewsController.cs",
-              "RelativeToolTip": "HeThongCanhBaoDichBenh\\Controllers\\NewsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T16:42:17.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "news.css",
-              "DocumentMoniker": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\wwwroot\\css\\news.css",
-              "RelativeDocumentMoniker": "HeThongCanhBaoDichBenh\\wwwroot\\css\\news.css",
-              "ToolTip": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\wwwroot\\css\\news.css",
-              "RelativeToolTip": "HeThongCanhBaoDichBenh\\wwwroot\\css\\news.css",
-              "ViewState": "AgIAACUBAAAAAAAAAAAswDABAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-03T14:53:00.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Views\\News\\Index.cshtml",
               "RelativeDocumentMoniker": "HeThongCanhBaoDichBenh\\Views\\News\\Index.cshtml",
               "ToolTip": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Views\\News\\Index.cshtml",
               "RelativeToolTip": "HeThongCanhBaoDichBenh\\Views\\News\\Index.cshtml",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAE0AAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-03T14:51:21.542Z",
+              "WhenOpened": "2025-05-07T16:31:01.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Disease.cs",
+              "DocumentMoniker": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Models\\Disease.cs",
+              "RelativeDocumentMoniker": "HeThongCanhBaoDichBenh\\Models\\Disease.cs",
+              "ToolTip": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Models\\Disease.cs",
+              "RelativeToolTip": "HeThongCanhBaoDichBenh\\Models\\Disease.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T16:19:47.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "HeThongCanhBaoDichBenh\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "HeThongCanhBaoDichBenh\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFcAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-07T16:17:52.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "HeThongCanhBaoDichBenh\\Controllers\\AccountController.cs",
-              "ToolTip": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "HeThongCanhBaoDichBenh\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Views\\Disease\\Index.cshtml",
+              "RelativeDocumentMoniker": "HeThongCanhBaoDichBenh\\Views\\Disease\\Index.cshtml",
+              "ToolTip": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Views\\Disease\\Index.cshtml",
+              "RelativeToolTip": "HeThongCanhBaoDichBenh\\Views\\Disease\\Index.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwB0AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-07T16:15:25.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DiseaseController.cs",
+              "DocumentMoniker": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Controllers\\DiseaseController.cs",
+              "RelativeDocumentMoniker": "HeThongCanhBaoDichBenh\\Controllers\\DiseaseController.cs",
+              "ToolTip": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\Controllers\\DiseaseController.cs",
+              "RelativeToolTip": "HeThongCanhBaoDichBenh\\Controllers\\DiseaseController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T14:51:17.322Z",
+              "WhenOpened": "2025-05-07T16:10:13.618Z",
               "EditorCaption": ""
             }
           ]

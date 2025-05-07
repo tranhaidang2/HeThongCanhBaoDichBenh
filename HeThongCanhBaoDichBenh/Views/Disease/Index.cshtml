@@ -1,0 +1,120 @@
+﻿@model X.PagedList.IPagedList<HeThongCanhBaoDichBenh.Models.Disease>
+@{
+    ViewData["Title"] = "Trang Tin Tức";
+}
+@using X.PagedList.Mvc.Core
+<link rel="stylesheet" href="~/css/news.css" asp-append-version="true" />
+
+<!-- Recent Posts Section -->
+<section id="recent-posts" class="recent-posts section">
+    <!-- Content Area -->
+    <div class="container">
+        <div class="row">
+            <!-- Right: Filter (col-2) -->
+            <div class="col-lg-3">
+                <div class="filter-box p-3 border rounded bg-light">
+                    <h5 class="mb-3">Lọc bài viết</h5>
+                    <input type="text" id="search-input" class="form-control mb-3" placeholder="Tìm kiếm...">
+                </div>
+            </div>
+            <!-- Left: Posts (col-10) -->
+            <div class="col-lg-9">
+                <div class="row gy-5" id="news-list">
+                    @foreach (var disease in Model)
+                    {
+                        <div class="col-xl-4 col-md-6 news-item"
+                             data-title="@disease.DiseaseName?.ToLower()"
+                             data-content="@disease.Description?.ToLower()"
+                             data-tags="@disease.Symptoms?.ToLower()">
+                            <div class="post-item position-relative h-100" data-aos="fade-up">
+                                <div class="post-img position-relative overflow-hidden">
+                                    <img src="@(string.IsNullOrEmpty(disease.Images?.FirstOrDefault()?.ImagePath) ? "/img/download.jpg" : disease.Images?.FirstOrDefault()?.ImagePath)" class="image" alt="News Image">
+                                </div>
+                                <div class="post-content d-flex flex-column">
+                                    <h3 class="post-title">@disease.DiseaseName</h3>
+                                    <div class="meta d-flex align-items-center mt-2">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-person"></i>
+                                            <span class="ps-2">Lê Khánh Duy</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <a href="#" class="readmore stretched-link">
+                                        <span>Đọc thêm</span>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }),
+                     new PagedListRenderOptions
+            {
+                LiElementClasses = new string[] { "page-item" },
+                PageClasses = new string[] { "page-link" },
+                UlElementClasses = new string[] { "pagination justify-content-center" },
+                DisplayLinkToFirstPage = PagedListDisplayMode.IfNeeded,
+                DisplayLinkToLastPage = PagedListDisplayMode.IfNeeded,
+                DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+                DisplayLinkToNextPage = PagedListDisplayMode.Always,
+                LinkToFirstPageFormat = "««",
+                LinkToPreviousPageFormat = "«",
+                LinkToNextPageFormat = "»",
+                LinkToLastPageFormat = "»»"
+            })
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            function normalizeText(text) {
+                return text ? text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") : "";
+            }
+
+            $('#search-input').on('keyup', function () {
+                filterNews();
+            });
+
+            $('.filter-checkbox').on('change', function () {
+                filterNews();
+            });
+
+            function filterNews() {
+                const searchTerm = normalizeText($('#search-input').val());
+                const checkedFilters = $('.filter-checkbox:checked').map(function () {
+                    return normalizeText($(this).val());
+                }).get();
+
+                let hasVisibleItems = false;
+
+                $('.news-item').each(function () {
+                    const $item = $(this);
+                    const title = normalizeText($item.data('title'));
+                    const content = normalizeText($item.data('content'));
+                    const tags = normalizeText($item.data('tags'));
+
+                    const matchesSearch = title.includes(searchTerm) || content.includes(searchTerm);
+                    const matchesFilter = checkedFilters.length === 0 || checkedFilters.some(tag => tags.includes(tag));
+
+                    if (matchesSearch && matchesFilter) {
+                        $item.show();
+                        hasVisibleItems = true;
+                    } else {
+                        $item.hide();
+                    }
+                });
+
+                $('#no-results').toggleClass('d-none', hasVisibleItems);
+            }
+
+            filterNews();
+        });
+    </script>
+}

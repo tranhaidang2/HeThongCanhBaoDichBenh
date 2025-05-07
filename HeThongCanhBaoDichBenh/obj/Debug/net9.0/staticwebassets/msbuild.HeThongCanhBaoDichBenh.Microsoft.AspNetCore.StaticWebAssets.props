@@ -606,8 +606,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>jvbhjr6ska</Fingerprint>
-      <Integrity>X/UHKCkikrAGUcXwJmMBS5XzRRdr4wGiFZmy5e3Og8A=</Integrity>
+      <Fingerprint>a0e8qkephm</Fingerprint>
+      <Integrity>6kIlSfcJaA0TIt2dbAQJOIrWR1Niqif02U8EEPFYFLY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\news.css'))</OriginalItemSpec>
@@ -642,11 +642,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>mp4hg4cn0f</Fingerprint>
-      <Integrity>GlIJvNkOkQsOUZ0/EPqK3c1O93nXnKbWgt30fGIITq8=</Integrity>
+      <Fingerprint>pdz4xxl4hf</Fingerprint>
+      <Integrity>HcFi1nivihhmZCVdTAFOdt34P25+1Dqig33lz/X8cSQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\weather.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HeThongCanhBaoDichBenh</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HeThongCanhBaoDichBenh</BasePath>
+      <RelativePath>css/weather.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lfv09aelgt</Fingerprint>
+      <Integrity>IdAzMXPErH0FXLpqNLVq0lQFUs5lJ8YQUg/bWa/LOms=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\weather.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))">
       <SourceType>Package</SourceType>

@@ -197,6 +197,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\wwwroot\\css\\weather.css",
+      "PackagePath": "staticwebassets\\css\\weather.css"
+    },
+    {
       "Id": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

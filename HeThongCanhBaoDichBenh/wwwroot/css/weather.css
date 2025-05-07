@@ -1,0 +1,177 @@
+﻿:root {
+    --default-font: "Roboto", system-ui, sans-serif;
+    --heading-font: "Nunito", sans-serif;
+    --nav-font: "Inter", sans-serif;
+    /* Main Colors */
+    --background-color: #e0f7fa;
+    --surface-color: #ffffff;
+    --default-color: #263238;
+    --heading-color: #004d40;
+    --accent-color: #ff7043;
+    --contrast-color: #ffffff;
+    /* Alert/Status */
+    --new-contrast-color: #ffe0b2;
+    --new-dark-contract-font: #263238;
+    --new-background-color: #b2ebf2;
+    /* Nav colors */
+    --nav-color: #004d40;
+    --nav-hover-color: #00acc1;
+    --nav-mobile-background-color: #ffffff;
+    --nav-dropdown-background-color: #ffffff;
+    --nav-dropdown-color: #004d40;
+    --nav-dropdown-hover-color: #00acc1;
+}
+
+body {
+    font-family: var(--default-font);
+    background-color: var(--background-color);
+    color: var(--default-color);
+    line-height: 1.6;
+}
+
+.weather-container {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 15px;
+}
+
+.weather-card {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 77, 64, 0.15);
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.card-title {
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+    font-weight: 800;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: var(--nav-color);
+    border-color: var(--nav-color);
+    font-family: var(--nav-font);
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 12px;
+    transition: all 0.3s ease;
+    color: var(--contrast-color);
+}
+
+    .btn-primary:hover {
+        background-color: var(--nav-hover-color);
+        border-color: var(--nav-hover-color);
+        transform: translateY(-2px);
+        color: var(--contrast-color);
+    }
+
+.form-control {
+    border: 2px solid #00acc1;
+    border-radius: 14px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+}
+
+    .form-control:focus {
+        border-color: var(--nav-hover-color);
+        box-shadow: 0 0 0 0.25rem rgba(0, 172, 193, 0.3);
+    }
+
+.weather-table {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+    .weather-table thead th {
+        background-color: var(--nav-color);
+        color: var(--contrast-color);
+        font-family: var(--nav-font);
+        font-weight: 600;
+        font-size: 1.05rem;
+        text-align: center;
+        padding: 16px 24px;
+    }
+
+    .weather-table tbody td {
+        padding: 14px 24px;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(178, 235, 242, 0.25);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 172, 193, 0.1);
+}
+
+.alert-danger {
+    background-color: var(--new-contrast-color);
+    color: var(--new-dark-contract-font);
+    border: 1px solid #ffb74d;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.city-name {
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+.weather-icon {
+    background-color: var(--new-background-color);
+    border-radius: 50%;
+    padding: 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-icon-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.result-highlight {
+    color: var(--accent-color);
+    font-size: 1.05rem;
+}
+
+.divider {
+    border-top: 2px solid var(--nav-hover-color);
+    opacity: 0.3;
+    margin: 2rem 0;
+}
+
+.search-section {
+    padding: 2rem 0 1rem;
+}
+
+.result-section {
+    padding: 1rem 0 2rem;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.8rem;
+    }
+
+    .weather-table thead th,
+    .weather-table tbody td {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .weather-icon-img {
+        width: 40px;
+        height: 40px;
+    }
+}

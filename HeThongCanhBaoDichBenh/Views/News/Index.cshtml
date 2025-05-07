@@ -1,7 +1,9 @@
-﻿@model List<HeThongCanhBaoDichBenh.Models.News>
+﻿@* @model List<HeThongCanhBaoDichBenh.Models.News> *@
 @{
     ViewData["Title"] = "Trang Tin Tức";
 }
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<News>
 <link rel="stylesheet" href="~/css/news.css" asp-append-version="true" />
 <!-- Recent Posts Section -->
 <section id="recent-posts" class="recent-posts section">
@@ -57,12 +59,12 @@
                     @foreach (var news in Model)
                     {
                         <div class="col-xl-4 col-md-6 news-item"
-                             data-title="@news.NewsTitle.ToLower()"
-                             data-content="@news.NewsContent.ToLower()"
+                             data-title="@news.NewsTitle?.ToLower()"
+                             data-content="@news.NewsContent?.ToLower()"
                              data-tags="@news.NewsTitle?.ToLower()">
                             <div class="post-item position-relative h-100" data-aos="fade-up">
                                 <div class="post-img position-relative overflow-hidden">
-                                    <img src="@(string.IsNullOrEmpty(news.Images.FirstOrDefault()?.ImagePath) ? "/img/download.jpg" : news.Images.FirstOrDefault().ImagePath)" class="image" alt="News Image">
+                                    <img src="@(string.IsNullOrEmpty(news.Images?.FirstOrDefault()?.ImagePath) ? "/img/download.jpg" : news.Images?.FirstOrDefault()?.ImagePath)" class="image" alt="News Image">
                                     <span class="post-date">@news.NewsCreateAt.ToString("dd/MM/yyyy")</span>
                                 </div>
                                 <div class="post-content d-flex flex-column">
@@ -83,13 +85,28 @@
                         </div>
                     }
                 </div>
+                
             </div>
 
-
+            
         </div>
 
-        <div id="no-results" class="text-center d-none" style="height: 70vh; display: flex; justify-content: center; align-items: center;">
-            <h4>Không có kết quả phù hợp</h4>
+        <div class="mt-5">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }),
+                     new PagedListRenderOptions
+            {
+                LiElementClasses = new string[] { "page-item" },
+                PageClasses = new string[] { "page-link" },
+                UlElementClasses = new string[] { "pagination justify-content-center" },
+                DisplayLinkToFirstPage = PagedListDisplayMode.IfNeeded,
+                DisplayLinkToLastPage = PagedListDisplayMode.IfNeeded,
+                DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+                DisplayLinkToNextPage = PagedListDisplayMode.Always,
+                LinkToFirstPageFormat = "««",
+                LinkToPreviousPageFormat = "«",
+                LinkToNextPageFormat = "»",
+                LinkToLastPageFormat = "»»"
+            })
         </div>
     </div>
 </section>

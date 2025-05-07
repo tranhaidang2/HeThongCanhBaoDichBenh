@@ -1,0 +1,89 @@
+﻿@model List<WeatherInfo>
+@{
+    ViewBag.Title = "Dự báo thời tiết";
+}
+<link rel="stylesheet" href="~/css/weather.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Roboto&family=Inter:wght@600&display=swap" rel="stylesheet">
+
+<div class="container-fluid weather-container px-0">
+    <div class="row mx-0">
+        <div class="col-12 px-0">
+            <div class="weather-card">
+                <div class="card-body p-4 p-lg-5">
+                    <!-- Search Section -->
+                    <div class="search-section">
+                        <h2 class="card-title text-center mb-5">DỰ BÁO DỊCH BỆNH TRONG THỜI GIAN TỚI</h2>
+
+                        <form method="post" asp-action="Forecast">
+                            <div class="row g-3 justify-content-center">
+                                <div class="col-lg-8 col-md-10">
+                                    <input type="text" class="form-control" id="city" name="city"
+                                           placeholder="Nhập tỉnh/thành phố (ví dụ: Hà Nội, Đà Nẵng)" required />
+                                </div>
+                                <div class="col-lg-2 col-md-2">
+                                    <button type="submit" class="btn btn-primary w-100 h-100">
+                                        <i class="fas fa-search me-2"></i>Dự báo
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    @if (Model?.Count > 0)
+                    {
+                        <div class="result-section">
+                            <div class="divider"></div>
+                            <h4 class="text-center mb-4">Kết quả dự báo cho: <span class="city-name">@ViewBag.City</span></h4>
+
+                            <div class="table-responsive">
+                                <table class="table weather-table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Thời gian</th>
+                                            <th>Biểu tượng</th>
+                                            <th>Nhiệt độ (°C)</th>
+                                            <th>Độ ẩm (%)</th>
+                                            <th>Áp suất (hPa)</th>
+                                            <th>Gió (m/s)</th>
+                                            <th>Mô tả</th>
+                                            <th>Kết quả</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@item.DateTime.ToString("dd/MM/yyyy HH:mm")</td>
+                                                <td>
+                                                    <div class="weather-icon">
+                                                        <img src="@($"https://openweathermap.org/img/wn/{item.Icon}@2x.png")"
+                                                             alt="@item.Description" class="weather-icon-img" />
+                                                    </div>
+                                                </td>
+                                                <td>@item.Temperature</td>
+                                                <td>@item.Humidity</td>
+                                                <td>@item.Pressure</td>
+                                                <td>@item.WindSpeed</td>
+                                                <td class="">@item.Description</td>
+                                                <td class="result-highlight">@ViewBag.Result</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    }
+
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger mt-4 d-flex align-items-center">
+                            <i class="fas fa-exclamation-triangle me-3"></i>
+                            <div>@ViewBag.Error</div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
