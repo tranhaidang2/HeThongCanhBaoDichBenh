@@ -85,7 +85,9 @@
                         </div>
                     }
                 </div>
-                
+                <div id="no-results" class="text-center d-none h-100" style="margin-top: 50px;">
+                    <p class="text-muted">Không tìm thấy bài viết phù hợp.</p>
+                </div>
             </div>
 
             
@@ -118,17 +120,9 @@
                 return text ? text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") : "";
             }
 
-            $('#search-input').on('keyup', function () {
-                filterNews();
-            });
-
-            $('.filter-checkbox').on('change', function () {
-                filterNews();
-            });
-
             function filterNews() {
                 const searchTerm = normalizeText($('#search-input').val());
-                const checkedFilters = $('.filter-checkbox:checked').map(function () {
+                const checkedTags = $('.filter-checkbox:checked').map(function () {
                     return normalizeText($(this).val());
                 }).get();
 
@@ -136,14 +130,14 @@
 
                 $('.news-item').each(function () {
                     const $item = $(this);
-                    const title = normalizeText($item.data('title'));
-                    const content = normalizeText($item.data('content'));
-                    const tags = normalizeText($item.data('tags'));
+                    const title = normalizeText($item.attr('data-title'));
+                    const content = normalizeText($item.attr('data-content'));
+                    const tags = normalizeText($item.attr('data-tags'));
 
-                    const matchesSearch = title.includes(searchTerm) || content.includes(searchTerm);
-                    const matchesFilter = checkedFilters.length === 0 || checkedFilters.some(tag => tags.includes(tag));
+                    const isMatchSearch = searchTerm === "" || title.includes(searchTerm) || content.includes(searchTerm);
+                    const isMatchFilter = checkedTags.length === 0 || checkedTags.some(tag => tags.includes(tag));
 
-                    if (matchesSearch && matchesFilter) {
+                    if (isMatchSearch && isMatchFilter) {
                         $item.show();
                         hasVisibleItems = true;
                     } else {
@@ -154,7 +148,11 @@
                 $('#no-results').toggleClass('d-none', hasVisibleItems);
             }
 
+            $('#search-input').on('input', filterNews);
+            $('.filter-checkbox').on('change', filterNews);
+
             filterNews();
         });
     </script>
 }
+

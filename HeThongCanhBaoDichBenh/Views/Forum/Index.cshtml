@@ -1,0 +1,147 @@
+﻿@model X.PagedList.IPagedList<News>
+@using X.PagedList.Mvc.Core
+<link rel="stylesheet" href="~/css/forum.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/news.css" asp-append-version="true" />
+
+<section class="recent-posts section">
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar: Bộ lọc và Đăng bài -->
+            <div class="col-lg-3">
+                <div class="filter-box p-3 border rounded bg-light">
+                    <button class="btn btn-primary w-100 mb-3" data-bs-toggle="modal" data-bs-target="#postModal">Đăng bài</button>
+
+                    <h5 class="mb-3">Bộ lọc bài viết</h5>
+                    <input type="text" id="search-input" class="form-control mb-3" placeholder="Tìm kiếm...">
+
+                    <div class="form-check">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="đốm trắng" id="filter1">
+                        <label class="form-check-label" for="filter1">Đốm trắng</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="phân trắng" id="filter2">
+                        <label class="form-check-label" for="filter2">Phân trắng</label>
+                    </div>
+                    <!-- Thêm checkbox khác tùy ý -->
+                </div>
+            </div>
+
+            <!-- Content: Bài viết -->
+            <div class="col-lg-9">
+                <div id="news-list">
+                    <div class="news-item-full p-3 mb-4 border rounded bg-white"
+                         data-title=")"
+                         data-content=""
+                         data-tags="">
+                        <div class="d-flex flex-column flex-md-row">
+                            <div>
+                                <h4 class="fw-bold">fsfsfesf</h4>
+                                <small class="text-muted">Ngày đăng:  "Quản trị viên")</small>
+                                <p class="mt-2 text-truncate-3"></p>
+                                <a href="" class="btn btn-sm btn-outline-primary mt-2">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="mt-4">
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }),
+                             new PagedListRenderOptions
+                    {
+                        LiElementClasses = new string[] { "page-item" },
+                        PageClasses = new string[] { "page-link" },
+                        UlElementClasses = new string[] { "pagination justify-content-center" },
+                        DisplayLinkToFirstPage = PagedListDisplayMode.IfNeeded,
+                        DisplayLinkToLastPage = PagedListDisplayMode.IfNeeded,
+                        DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+                        DisplayLinkToNextPage = PagedListDisplayMode.Always,
+                        LinkToFirstPageFormat = "««",
+                        LinkToPreviousPageFormat = "«",
+                        LinkToNextPageFormat = "»",
+                        LinkToLastPageFormat = "»»"
+                    })
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PostModal.cshtml -->
+<div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content post-modal-wrapper">
+            <form method="post" action="/News/Create" enctype="multipart/form-data">
+                <div class="modal-header post-modal-header">
+                    <h5 class="modal-title" id="postModalLabel">🌊 Đăng bài viết mới</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <div class="modal-body post-modal-body">
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control post-input" name="NewsTitle" id="NewsTitle" placeholder="Tiêu đề" required />
+                        <label for="NewsTitle">Tiêu đề bài viết</label>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="ImageFile" class="form-label fw-semibold">Ảnh minh họa</label>
+                        <input type="file" class="form-control post-input" name="ImageFile" id="ImageFile" />
+                    </div>
+
+                    <div class="form-floating">
+                        <textarea class="form-control post-input" placeholder="Nội dung" id="NewsContent" name="NewsContent" style="height: 180px" required></textarea>
+                        <label for="NewsContent">Nội dung</label>
+                    </div>
+                </div>
+                <div class="modal-footer post-modal-footer">
+                    <button type="submit" class="btn btn-post">📢 Đăng bài</button>
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">❌ Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            function normalizeText(text) {
+                return text ? text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") : "";
+            }
+
+            function filterNews() {
+                const searchTerm = normalizeText($('#search-input').val());
+                const checkedTags = $('.filter-checkbox:checked').map(function () {
+                    return normalizeText($(this).val());
+                }).get();
+
+                let hasVisibleItems = false;
+
+                $('.news-item-full').each(function () {
+                    const $item = $(this);
+                    const title = normalizeText($item.attr('data-title'));
+                    const content = normalizeText($item.attr('data-content'));
+                    const tags = normalizeText($item.attr('data-tags'));
+
+                    const isMatchSearch = searchTerm === "" || title.includes(searchTerm) || content.includes(searchTerm);
+                    const isMatchFilter = checkedTags.length === 0 || checkedTags.some(tag => tags.includes(tag));
+
+                    if (isMatchSearch && isMatchFilter) {
+                        $item.show();
+                        hasVisibleItems = true;
+                    } else {
+                        $item.hide();
+                    }
+                });
+
+                $('#no-results').toggleClass('d-none', hasVisibleItems);
+            }
+
+            $('#search-input').on('input', filterNews);
+            $('.filter-checkbox').on('change', filterNews);
+
+            filterNews();
+        });
+    </script>
+}

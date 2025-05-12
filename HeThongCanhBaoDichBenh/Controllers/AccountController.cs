@@ -90,16 +90,13 @@ namespace HeThongCanhBaoDichBenh.Controllers
             });
         }
 
-        public JsonResult Logout()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Logout()
         {
             HttpContext.Session.Clear();
-
-            return Json(new
-            {
-                success = true,
-                message = "Đăng xuất thành công!",
-                redirectUrl = Url.Action("Index", "Home")
-            });
+            return RedirectToAction("Index", "Home");
         }
+
     }
 }

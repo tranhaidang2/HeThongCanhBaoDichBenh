@@ -1,0 +1,25 @@
+﻿.forum-container {
+    font-size: 1rem;
+}
+
+.filter-box {
+    border: 1px solid #ddd;
+}
+
+.filter-title {
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.post {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.username {
+    font-weight: 600;
+    color: var(--heading-color);
+}

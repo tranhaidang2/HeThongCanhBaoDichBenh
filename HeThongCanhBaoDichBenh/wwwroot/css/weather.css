@@ -30,7 +30,6 @@ body {
 }
 
 .weather-container {
-    max-width: 1200px;
     margin: 80px auto;
     padding: 0 15px;
 }
@@ -40,7 +39,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 77, 64, 0.15);
     overflow: hidden;
-    padding: 1rem;
 }
 
 .card-title {

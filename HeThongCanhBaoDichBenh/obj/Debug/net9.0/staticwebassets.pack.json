@@ -185,6 +185,10 @@
       "PackagePath": "staticwebassets\\css\\account.css"
     },
     {
+      "Id": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\wwwroot\\css\\forum.css",
+      "PackagePath": "staticwebassets\\css\\forum.css"
+    },
+    {
       "Id": "W:\\TL_Main\\HeThongCanhBaoDichBenh\\HeThongCanhBaoDichBenh\\wwwroot\\css\\news.css",
       "PackagePath": "staticwebassets\\css\\news.css"
     },

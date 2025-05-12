@@ -15,6 +15,15 @@
                 <div class="filter-box p-3 border rounded bg-light">
                     <h5 class="mb-3">Lọc bài viết</h5>
                     <input type="text" id="search-input" class="form-control mb-3" placeholder="Tìm kiếm...">
+                    @foreach (var disease in Model.OrderBy(d => d.DiseaseName))
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input filter-checkbox" type="checkbox" value="@disease.DiseaseName" id="filter_@disease.DiseaseId">
+                            <label class="form-check-label" for="filter_@disease.DiseaseId">
+                                @disease.DiseaseName
+                            </label>
+                        </div>
+                    }
                 </div>
             </div>
             <!-- Left: Posts (col-10) -->
@@ -25,7 +34,7 @@
                         <div class="col-xl-4 col-md-6 news-item"
                              data-title="@disease.DiseaseName?.ToLower()"
                              data-content="@disease.Description?.ToLower()"
-                             data-tags="@disease.Symptoms?.ToLower()">
+                             data-tags="@disease.DiseaseName?.ToLower()">
                             <div class="post-item position-relative h-100" data-aos="fade-up">
                                 <div class="post-img position-relative overflow-hidden">
                                     <img src="@(string.IsNullOrEmpty(disease.Images?.FirstOrDefault()?.ImagePath) ? "/img/download.jpg" : disease.Images?.FirstOrDefault()?.ImagePath)" class="image" alt="News Image">
@@ -48,6 +57,10 @@
                         </div>
                     }
                 </div>
+                <div id="no-results" class="text-center d-none h-100" style="margin-top: 50px;">
+                    <p class="text-muted">Không tìm thấy bài viết phù hợp.</p>
+                </div>
+
             </div>
         </div>
 
@@ -75,16 +88,10 @@
     <script>
         $(document).ready(function () {
             function normalizeText(text) {
-                return text ? text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") : "";
+                return text ? text.toLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "") : "";
             }
-
-            $('#search-input').on('keyup', function () {
-                filterNews();
-            });
-
-            $('.filter-checkbox').on('change', function () {
-                filterNews();
-            });
 
             function filterNews() {
                 const searchTerm = normalizeText($('#search-input').val());
@@ -100,7 +107,7 @@
                     const content = normalizeText($item.data('content'));
                     const tags = normalizeText($item.data('tags'));
 
-                    const matchesSearch = title.includes(searchTerm) || content.includes(searchTerm);
+                    const matchesSearch = !searchTerm || title.includes(searchTerm) || content.includes(searchTerm) || tags.includes(searchTerm);
                     const matchesFilter = checkedFilters.length === 0 || checkedFilters.some(tag => tags.includes(tag));
 
                     if (matchesSearch && matchesFilter) {
@@ -113,6 +120,9 @@
 
                 $('#no-results').toggleClass('d-none', hasVisibleItems);
             }
+
+            $('#search-input').on('input', filterNews);
+            $('.filter-checkbox').on('change', filterNews);
 
             filterNews();
         });

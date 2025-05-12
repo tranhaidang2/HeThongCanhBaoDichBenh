@@ -594,6 +594,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\bootstrap.rtl.min.css.map'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\forum.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HeThongCanhBaoDichBenh</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HeThongCanhBaoDichBenh</BasePath>
+      <RelativePath>css/forum.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8w0lgjmd6z</Fingerprint>
+      <Integrity>yNP5INV5R3ZuYcOq5BTaFUDcD0XF2mzg3/x2SeA6rQs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\forum.css'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\news.css'))">
       <SourceType>Package</SourceType>
       <SourceId>HeThongCanhBaoDichBenh</SourceId>
@@ -606,8 +624,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>a0e8qkephm</Fingerprint>
-      <Integrity>6kIlSfcJaA0TIt2dbAQJOIrWR1Niqif02U8EEPFYFLY=</Integrity>
+      <Fingerprint>v1k4lo91ck</Fingerprint>
+      <Integrity>g6OeaMI1fPxJ6x7UZc1toU9DZSuCTXuxttGrGfxy5A0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\news.css'))</OriginalItemSpec>
@@ -660,8 +678,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>lfv09aelgt</Fingerprint>
-      <Integrity>IdAzMXPErH0FXLpqNLVq0lQFUs5lJ8YQUg/bWa/LOms=</Integrity>
+      <Fingerprint>zcrx484znv</Fingerprint>
+      <Integrity>w6xVSU/HmPZzLJnVIywgn2N4e19f2u2ma1DdKczBV+o=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\weather.css'))</OriginalItemSpec>
@@ -768,8 +786,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zljajt7497</Fingerprint>
-      <Integrity>OYdl4KllQiLtok/TfI39RfFTVSu3F7tLMRme/OfC/Xg=</Integrity>
+      <Fingerprint>upt88nsofi</Fingerprint>
+      <Integrity>csyaT7kLar8Swn87rJ+1n7d6yGOElCeVs4jo6QtlmHM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\accountLogic.js'))</OriginalItemSpec>

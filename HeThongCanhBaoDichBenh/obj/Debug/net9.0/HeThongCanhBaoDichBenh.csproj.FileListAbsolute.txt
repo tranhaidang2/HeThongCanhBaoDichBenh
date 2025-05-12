@@ -295,7 +295,6 @@ W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compre
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\xi87ztm2kl-dpno2ecxid.gz
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\r3fswliz6z-inpuwtglbx.gz
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\a7r2lopl0h-z0yu7jkq53.gz
-W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\pqxhvl2vi0-zljajt7497.gz
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\balb3jphcm-n17dbprvmh.gz
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\bin\Debug\net9.0\System.Web.Mvc.dll
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\bin\Debug\net9.0\System.Web.Razor.dll
@@ -307,7 +306,9 @@ W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\bin\Debug\net9.0\Micros
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\bin\Debug\net9.0\X.PagedList.dll
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\bin\Debug\net9.0\X.PagedList.Mvc.Core.dll
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\HeThongCanhBaoDichBenh.MvcApplicationPartsAssemblyInfo.cs
-W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\eqvoazlm60-a0e8qkephm.gz
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\bin\Debug\net9.0\Newtonsoft.Json.dll
 W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\dbq34itz55-pdz4xxl4hf.gz
-W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\gfh1rhm32q-lfv09aelgt.gz
+W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\pqxhvl2vi0-upt88nsofi.gz
+W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\gfh1rhm32q-zcrx484znv.gz
+W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\gdouls3kbw-8w0lgjmd6z.gz
+W:\TL_Main\HeThongCanhBaoDichBenh\HeThongCanhBaoDichBenh\obj\Debug\net9.0\compressed\eqvoazlm60-v1k4lo91ck.gz
